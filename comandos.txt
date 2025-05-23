@@ -1,0 +1,63 @@
+#crear entorno virtual
+python -m venv env
+
+#activar entorno virtual
+source env/Scripts/activate
+
+#desactivar entorno virtual
+source env/Scripts/deactivate
+
+#listar paquetes instalados
+pip list or pip freeze
+
+#instalar django
+pip install django
+
+#cli de django
+django-admin startproject nombre_proyecto
+
+#ejecutar proyecto
+python manage.py runserver
+
+#crear usuario admin
+python manage.py createsuperuser
+
+#aplicar migraciones
+python manage.py migrate
+
+#crear app
+python manage.py startapp nombre_app
+
+#crear migraciones
+python manage.py makemigrations
+
+#verificar migraciones
+python manage.py sqlmigrate nombre_app 0001
+
+#ingresar en la terminal de django
+python manage.py shell
+
+#aqui podemos usar el orm de django para crear datos
+#crear datos
+p = nombre_modelo.objects.create(campo1="valor1", campo2="valor2")
+
+#guardar datos
+p.save()
+
+#consultar datos
+p = nombre_modelo.objects.get(campo1="valor1")
+
+#actualizar datos
+p.campo1 = "nuevo valor"
+p.save()
+
+#eliminar datos
+p.delete()
+
+#obtener todos los datos
+nombre_modelo.objects.all()
+
+#obtener un dato
+nombre_modelo.objects.get(campo1="valor1")
+
+
