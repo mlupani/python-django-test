@@ -59,4 +59,3 @@ nombre_modelo.objects.all()
 
 #obtener un dato
 nombre_modelo.objects.get(campo1="valor1")
-
